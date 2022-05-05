@@ -226,8 +226,8 @@ export default function TopNav() {
                   name={link.name}
                   path={link.path}
                   linkColor={linkColor}
-                  onClose={onClose}
-                />
+                  outline={'dashed'}
+                  onClose={onClose}              />
               ))}
             </HStack>
           <Flex alignItems={'left'}>
@@ -251,7 +251,7 @@ export default function TopNav() {
             maxW={800}
             display={['inherit', 'inherit', 'none']}
           >
-            <Stack as={'nav'} spacing={2}>
+            <Stack as={'nav'} spacing={5} >
               {mobileLinks.map((link, index) => (
                 <NavLink
                   key={index}
@@ -259,6 +259,7 @@ export default function TopNav() {
                   name={link.name}
                   path={link.path}
                   linkColor={linkColor}
+                  outline={'dashed'}
                   onClose={onClose}
                 />
               ))}
